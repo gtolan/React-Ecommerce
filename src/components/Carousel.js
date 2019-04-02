@@ -28,7 +28,6 @@ export default class Carousel extends Component {
     ]
   };
   checkClassActive(id) {
-    // console.log("check if class");
     return id === this.state.active ? "slide show" : "hidden";
   }
   checkControlActive(id) {
@@ -36,7 +35,6 @@ export default class Carousel extends Component {
   }
 
   componentDidMount() {
-    console.log("I am mounted!");
     this.startCarousel();
   }
 
@@ -45,10 +43,8 @@ export default class Carousel extends Component {
   }
 
   startCarousel() {
-    console.log("start carousel");
     const runSlides = () => {
       setTimeout(() => {
-        console.log(this.state.active, "active");
         this.setState((prevState, props) => ({
           active: prevState.active === 5 ? 1 : prevState.active + 1
         }));
