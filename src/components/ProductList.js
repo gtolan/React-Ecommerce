@@ -3,6 +3,8 @@ import Product from "./Product";
 import Title from "./Title";
 import { storeProducts } from "../data";
 import { Consumer } from "../context";
+import Carousel from "./Carousel";
+
 export default class ProductList extends Component {
   state = {
     products: storeProducts
@@ -10,6 +12,7 @@ export default class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
+        <Carousel />
         <div className="py-5">
           <div className="container">
             <Title name="Our" title="Products" />
